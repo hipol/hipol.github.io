@@ -403,11 +403,19 @@ $(".sentence").click(function() {
 
   document.querySelectorAll('.sentenceContainer').forEach(e => e.remove());
 
+  $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>HELLLO</span></div>`);
+
+  $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>DAMMMN</span></div>`);
+
   const sentencesDict = {};
 
   for (let i=0; i<originalCards.length; i++){
     sentencesDict[originalCards[i][0]] = originalCards[i]
   }
+
+  $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>1111</span></div>`);
+
+  $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>22222</span></div>`);
 
   const frenchWordOpened = opened[0][0].innerText;
 
