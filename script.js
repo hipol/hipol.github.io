@@ -411,11 +411,12 @@ $(".sentence").click(function() {
 
   const frenchWordOpened = opened[0][0].innerText;
 
+    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${frenchWordOpened}</span></div>`);
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict)}</span></div>`);
+    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict["permettre"])}</span></div>`);
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict[frenchWordOpened])}</span></div>`);
 
-  $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${frenchWordOpened}</span></div>`);
-$(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${JSON.stringify(sentencesDict["permettre"])}</span></div>`);
+
 // $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${JSON.stringify(sentencesDict["suivant"])}</span></div>`);
 
 
