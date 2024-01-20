@@ -415,7 +415,7 @@ $(".sentence").click(function() {
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict[frenchWordOpened])}</span></div>`);
 
   $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${frenchWordOpened}</span></div>`);
-$(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${JSON.stringify(sentencesDict["suivant"])}</span></div>`);
+$(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${JSON.stringify(sentencesDict["permettre"])}</span></div>`);
 // $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${JSON.stringify(sentencesDict["suivant"])}</span></div>`);
 
 
