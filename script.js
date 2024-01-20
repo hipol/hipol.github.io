@@ -16,7 +16,7 @@ let originalCards =
   ["sacré","sacred, a heck of a","Cet endroit a une signification sacrée pour la communauté.","This place has a sacred meaning for the community."  ],
   ["repas","meal","Nous avons partagé un délicieux repas ensemble.","We shared a delicious meal together."  ],
   ["détruire","destroy","La guerre a le pouvoir de détruire des villes entières.","War has the power to destroy entire cities."  ],
-  ["personnel","staff;  personal","C'est un choix personnel que je dois faire.","It's a personal choice that I have to make."  ],
+  ["personnel","staff; personal","C'est un choix personnel que je dois faire.","It's a personal choice that I have to make."  ],
   ["garde","custody; guard","Le garde surveille l'entrée du musée.","The guard is watching the entrance of the museum."  ],
   ["couteau","knife","Elle a utilisé un couteau tranchant pour couper les légumes.","She used a sharp knife to cut the vegetables."  ],
   ["témoin","witness","Le témoin a raconté ce qu'il a vu à la police.","The witness told the police what he saw."  ],
@@ -414,6 +414,14 @@ $(".sentence").click(function() {
   $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${sentencesDict[frenchWordOpened][2]}</span></div>`);
 
   $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${sentencesDict[frenchWordOpened][3]}</span></div>`);
+
+  //Selecting every ele with card class nd binding a click event to each card
+$(".card").click(function() {
+  
+  //Selcting current ele being clicked
+  openCards($(this));
+  console.log(this);
+});
 
 
 });
