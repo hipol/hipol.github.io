@@ -411,8 +411,9 @@ $(".sentence").click(function() {
 
   const frenchWordOpened = String(opened[0][0].innerText);
 
+    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${frenchWordOpened === "permettre"} </span></div>`);
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${frenchWordOpened} </span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>lolol</span></div>`);
+    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>ll2</span></div>`);
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict)}</span></div>`);
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict["permettre"])}</span></div>`);
     $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict[frenchWordOpened])}</span></div>`);
