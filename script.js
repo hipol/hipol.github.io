@@ -409,17 +409,17 @@ $(".sentence").click(function() {
     sentencesDict[originalCards[i][0]] = originalCards[i]
   }
 
-  const frenchWordOpened = String(opened[0][0].innerText);
+  const frenchWordOpened = String(opened[0][0].innerText).trim();
   const other = "permettre";
 
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${other === "permettre"} </span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${String(frenchWordOpened.trim()) === "permettre"} </span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${(typeof frenchWordOpened)} </span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${frenchWordOpened} </span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>wtf</span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict)}</span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict["permettre"])}</span></div>`);
-    $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict[frenchWordOpened])}</span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${other === "permettre"} </span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${String(frenchWordOpened.trim()) === "permettre"} </span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${(typeof frenchWordOpened)} </span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${frenchWordOpened} </span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>wtf</span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict)}</span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict["permettre"])}</span></div>`);
+    // $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${JSON.stringify(sentencesDict[frenchWordOpened])}</span></div>`);
 
 
 // $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${JSON.stringify(sentencesDict["suivant"])}</span></div>`);
