@@ -128,7 +128,7 @@ let originalCards =
   ["prêtre","priest","Le prêtre a conduit la cérémonie.","The priest conducted the ceremony."  ],
   ["saison","season","Ils adorent la saison d'automne.","They love the autumn season."  ],
   ["évidemment","obviously","Évidemment, elle était contrariée.","Obviously, she was upset."  ],
-  ["commetre","commit, make","Il a juré de ne jamais commettre la même erreur.","He vowed never to commit the same mistake."  ],
+  ["commettre","commit, make","Il a juré de ne jamais commettre la même erreur.","He vowed never to commit the same mistake."  ],
   ["au-delà","beyond; hereafter","Au-delà des montagnes se trouve une belle vallée.","Beyond the mountains lies a beautiful valley."  ],
   ["laver","wash","Elle s'est soigneusement lavé les mains.","She carefully washed her hands."  ],
   ["somme","sum, amount","J'ai besoin d'une bonne nuit de sommeil.","I need a good night's sleep."  ],
