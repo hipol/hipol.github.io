@@ -183,7 +183,16 @@ h1 {
     padding-right: 20px;
 }
 
+.score-panel .eye {
+    float: right;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+.fa-eye {
+	display: none;
+}
 
 
 #timer{
