@@ -631,6 +631,15 @@ function createCards() {
     //$("ul.deck").append(`<li class='card'><i class="${item}"></i></li>`);
     $("ul.englishDeck").append(`<li class='card english'><i class="${item} englishText">${item}</i></li>`);
   });
+
+
+  if(window.getComputedStyle(document.getElementById('eye')).getPropertyValue('display') === "block"){
+    document.querySelectorAll('.frenchText').forEach(e => e.style.fontSize = '0');
+  }
+
+
+
+
 }
 
 //Calling creating cards fuction will create cards dyanamically
