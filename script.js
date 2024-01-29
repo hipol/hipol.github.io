@@ -1630,12 +1630,27 @@ function createCards() {
   }
 
 
-
-
 }
 
 //Calling creating cards fuction will create cards dyanamically
 createCards();
+openNextCard();
+
+
+function openNextCard(card) {
+	const nextCard = document.querySelector('.card:not(.open)');
+	
+	responsiveVoice.speak(`${nextCard.innerText}`, "French Female", {rate: 1.0});
+    responsiveVoice.speak(`${nextCard.innerText}`, "French Female", {rate: 0.7});
+
+
+	opened.push(nextCard)
+	nextCard.classList.toggle("open")
+	nextCard.classList.toggle("show")
+	nextCard.classList.toggle("animated")
+	nextCard.classList.toggle("headShake")
+}
+
 
 //Selecting every ele with card class nd binding a click event to each card
 $(".card").click(function() {
@@ -1650,6 +1665,7 @@ function openCards(card) {
   
   /*checking if any card is opened or not if nothing is opened*/
   if (opened.length === 0) {
+  	console.log("it's 0")
     
     //push a card into array
     opened.push(card);
@@ -1668,6 +1684,7 @@ function openCards(card) {
   } 
   //if one card has already been pushed
   else if (opened.length === 1 && opened[0][0]!== card[0]) {
+  	console.log("it's 1")
     
         //push that card in array
     opened.push(card);
@@ -1713,7 +1730,8 @@ function checkMatch() {
   //an array to keep the track of opened cards
   let open = opened;
 
-  open[0].toggleClass("disable");
+  open[0].classList.toggle("disable");
+
   moveCounter();
 
   /*will check the matching of cards using same class name
@@ -1724,15 +1742,16 @@ function checkMatch() {
   if (
     // open[0][0].firstChild.className === open[1][0].firstChild.className &&
     // open[0][0] !== open[1][0]
-    areMatching(open[0][0].firstChild.innerText, open[1][0].firstChild.innerText) &&
+    areMatching(open[0].innerText, open[1][0].firstChild.innerText) &&
     open[0][0] !== open[1][0]
   ) {
     //matching cards
-    open[0].toggleClass("match tada");
+    open[0].classList.toggle("match")
+	open[0].classList.toggle("tada")
     open[1].toggleClass("match tada");
 
     //to stop click event on the opened cards
-    open[0].css("pointer-events", "none");
+    // open[0].css("pointer-events", "none");
     open[1].css("pointer-events", "none");
 
     //clear the array for next two cards
@@ -1741,16 +1760,23 @@ function checkMatch() {
   } else if (opened.length === 1 && opened[0][0] !== card[0]) {
     opened.toggleClass("disable");
   } else {
-    open[0].toggleClass("notMatch");
+    open[0].classList.toggle("notMatch");
     open[1].toggleClass("notMatch");
-    wordsToStudy = wordsToStudy.concat(open[0][0].firstChild.innerText);
+    wordsToStudy = wordsToStudy.concat(open[0].innerText);
     console.log(wordsToStudy);
     opened = [];
     setTimeout(function() {
-      open[0].toggleClass("open show animated notMatch headShake");
-      open[1].toggleClass("open show animated notMatch headShake");
+
+	    open[0].classList.toggle("open")
+		open[0].classList.toggle("show")
+		open[0].classList.toggle("animated")
+		open[0].classList.toggle("notMatch")
+		open[0].classList.toggle("headShake")
+
+        open[1].toggleClass("open show animated notMatch headShake");
     }, 300);
   }
+  openNextCard();
 }
 
 /*creating a counter to check all for all the opened cards
@@ -1828,6 +1854,7 @@ function reset() {
 }
 
 $(".restart").click(function() {
+	opened = [];
   //reset();
   document.querySelectorAll('.card').forEach(e => e.remove());
 
@@ -1841,6 +1868,7 @@ $(".restart").click(function() {
 
 
   createCards();
+  openNextCard();
   //Selecting every ele with card class nd binding a click event to each card
 $(".card").click(function() {
   
@@ -1858,7 +1886,7 @@ $(".card").click(function() {
 $(".sentence").click(function() {
   //reset();
 
-  // document.querySelectorAll('.sentenceContainer').forEach(e => e.remove());
+  document.querySelectorAll('.sentenceContainer').forEach(e => e.remove());
 
   const sentencesDict = {};
 
@@ -1866,7 +1894,7 @@ $(".sentence").click(function() {
     sentencesDict[originalCards[i][0]] = originalCards[i]
   }
 
-  const frenchWordOpened = String(opened[0][0].innerText).trim();
+  const frenchWordOpened = String(opened[0].innerText).trim();
 
   $(".sentenceBinder.french").append(`<div class='sentenceContainer'><span class='frenchSentence sentenceText'>${sentencesDict[frenchWordOpened][2]}</span></div>`);
   $(".sentenceBinder.english").append(`<div class='sentenceContainer'><span class='englishSentence sentenceText'>${sentencesDict[frenchWordOpened][3]}</span></div>`);
