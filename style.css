@@ -110,8 +110,14 @@ h1 {
 .deck .english{
     background: #509999;
 }
+/*
+.french.card {
+	display: none;
+}
 
-
+.french.card.open {
+	display: flex;
+}*/
 
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
