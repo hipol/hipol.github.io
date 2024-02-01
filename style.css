@@ -46,7 +46,8 @@ h1 {
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
-    margin: 0 0 1em;
+    margin: 1em;
+    font-size: 4em;
 }
 
 .english .sentenceContainer {
@@ -55,7 +56,8 @@ h1 {
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
-    margin: 0 0 1em;
+    margin: 1em;
+    font-size: 4em;
 }
 
 
@@ -110,14 +112,8 @@ h1 {
 .deck .english{
     background: #509999;
 }
-/*
-.french.card {
-	display: none;
-}
 
-.french.card.open {
-	display: flex;
-}*/
+
 
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -175,7 +171,7 @@ h1 {
     padding-right: 20px;
 }
 
-.score-panel .study {
+.score-panel .stop {
     float: right;
     cursor: pointer;
     padding-left: 20px;
