@@ -86,7 +86,7 @@ let originalCards = [
   ["matelot","sailor","Le matelot a passé de longues années en mer.","The sailor spent many years at sea.",4196  ],
   ["duo","duo","Ils forment un duo musical depuis plusieurs années.","They've been a musical duo for several years.",4197  ],
   ["trappe","trap","Il a failli tomber dans une trappe cachée dans le sol.","He almost fell into a trap hidden in the ground.",4198  ],
-  ["inspecter","to inspect","Il a inspecté la voiture avant de l'acheter.","He inspected the car before buying it.”,4199 ] 
+  ["inspecter","to inspect","Il a inspecté la voiture avant de l'acheter.","He inspected the car before buying it.",4200 ] 
 	];
 
 
