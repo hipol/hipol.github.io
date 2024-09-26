@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -24,6 +23,12 @@
       <header>
         <h1>Memory Game</h1>
       </header>
+
+      <label for="startIndex">Start Word:</label>
+      <input type="text" id="startIndex" placeholder="1" oninput="updateSubarray()">
+
+      <label for="endIndex">End Word:</label>
+      <input type="text" id="endIndex" placeholder="100" oninput="updateSubarray()">
 
       <section class="score-panel">
         <ul class="stars">
